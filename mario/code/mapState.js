@@ -488,7 +488,7 @@ Mario.MapState.prototype.Update = function(delta) {
         this.XMarioA = 0;
         this.YMarioA = 0;
         
-        if (this.CanEnterLevel && Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.S)) {
+        if (this.CanEnterLevel && (Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.S) || IsSButtonPressed())) {
             if (this.Level[x][y] === Mario.MapTile.Level && this.Data[x][y] !== -11) {
                 if (this.Level[x][y] === Mario.MapTile.Level && this.Data[x][y] !== 0 && this.Data[x][y] > -10) {
                     difficulty = this.WorldNumber + 1;
@@ -523,18 +523,18 @@ Mario.MapState.prototype.Update = function(delta) {
             }
         }
         
-        this.CanEnterLevel = !Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.S);
+        this.CanEnterLevel = !(Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.S || IsSButtonPressed()));
         
-        if (Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.Left)) {
+        if (Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.Left) || IsLeftButtonPressed()) {
             this.TryWalking(-1, 0);
         }
-        if (Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.Right)) {
+        if (Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.Right) || IsRightButtonPressed()) {
             this.TryWalking(1, 0);
         }
-        if (Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.Up)) {
+        if (Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.Up) || IsUpButtonPressed()) {
             this.TryWalking(0, -1);
         }
-        if (Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.Down)) {
+        if (Enjine.KeyboardInput.IsKeyDown(Enjine.Keys.Down) || IsDownButtonPressed()) {
             this.TryWalking(0, 1);
         }
     }
