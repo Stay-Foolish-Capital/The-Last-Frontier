@@ -4,7 +4,7 @@
 		<title>Infinite Mario</title>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
         <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0;user-scalable=0;">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	</head>
 	<body>
 		<canvas id="canvas" width="600" height="450">
@@ -25,6 +25,7 @@
                display: grid;
                grid-template-columns: 100px 100px 100px 100px 100px 100px;
                grid-template-rows: 100px 100px 100px;
+               user-select: none
             }
 
             .UpButton {
