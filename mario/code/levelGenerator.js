@@ -22,7 +22,7 @@ Mario.LevelGenerator.prototype = {
         this.Odds[Mario.Odds.HillStraight] = 10;
         this.Odds[Mario.Odds.Tubes] = 2 + difficulty;
         this.Odds[Mario.Odds.Jump] = 2 * difficulty;
-        this.Odds[Mario.Odds.Cannon] = -10 + 5 * difficulty;
+        this.Odds[Mario.Odds.Cannons] = -10 + 5 * difficulty;
         
         if (this.Type !== Mario.LevelType.Overground) {
             this.Odds[Mario.Odds.HillStraight] = 0;
@@ -76,7 +76,7 @@ Mario.LevelGenerator.prototype = {
     BuildZone: function(level, x, maxLength) {
         var t = (Math.random() * this.TotalOdds) | 0, type = 0, i = 0;
         for (i = 0; i < this.Odds.length; i++) {
-            if (this.Odds[i] <= t) {
+            if (this.Odds[i] <= t+1) {
                 type = i;
             }
         }
@@ -124,7 +124,6 @@ Mario.LevelGenerator.prototype = {
     },
     
     BuildCannons: function(level, xo, maxLength) {
-		alert("cannons");
         var length = ((Math.random() * 10) | 0) + 2, floor = this.Height - 1 - (Math.random() * 4) | 0,
             xCannon = xo + 1 + (Math.random() * 4) | 0, x = 0, y = 0, cannonHeight = 0;
             

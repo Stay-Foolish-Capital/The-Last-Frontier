@@ -32,7 +32,7 @@ Mario.BulletBill.prototype.CollideCheck = function() {
     
     var xMarioD = Mario.MarioCharacter.X - this.X, yMarioD = Mario.MarioCharacter.Y - this.Y;
     if (xMarioD > -16 && xMarioD < 16) {
-        if (yMarioD > -this.Height && yMarioD < this.World.Mario.Height) {
+        if (yMarioD > -this.Height && yMarioD < this.Height) {
             if (Mario.MarioCharacter.Y > 0 && yMarioD <= 0 && (!Mario.MarioCharacter.OnGround || !Mario.MarioCharacter.WasOnGround)) {
                 Mario.MarioCharacter.Stomp(this);
                 this.Dead = true;
@@ -70,7 +70,7 @@ Mario.BulletBill.prototype.Move = function() {
     
     this.Xa = this.Facing * sideWaysSpeed;
     this.XFlip = this.Facing === -1;
-    this.Move(this.Xa, 0);
+    this.SubMove(this.Xa, 0);
 };
 
 Mario.BulletBill.prototype.SubMove = function(xa, ya) {
