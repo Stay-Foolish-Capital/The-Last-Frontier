@@ -1,3 +1,7 @@
+/**
+	Represents support for mobile.
+	Code by Kento Morishima, 2024
+*/
 function ToggleButtonState(buttonId, state) {
     document.getElementById(buttonId).setAttribute('aria-pressed', state);
 }
