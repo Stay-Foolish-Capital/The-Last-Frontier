@@ -378,7 +378,7 @@ Mario.Enemy.prototype.Draw = function(context, camera) {
         xPixel = ((this.XOld + (this.X - this.XOld) * this.Delta) | 0) - this.XPicO;
         yPixel = ((this.YOld + (this.Y - this.YOld) * this.Delta) | 0) - this.YPicO;
         
-        if (this.Type === Mario.Enemy.RedKoopa && this.Type === Mario.Enemy.GreenKoopa) {
+        if (this.Type === Mario.Enemy.RedKoopa || this.Type === Mario.Enemy.GreenKoopa) {
             context.save();
             context.scale(this.XFlip ? -1 : 1, this.YFlip ? -1 : 1);
             context.translate(this.XFlip ? -320 : 0, this.YFlip ? -240 : 0);
