@@ -21,6 +21,7 @@ Mario.Fireball = function(world, x, y, facing) {
 	this.Height = 8;
 	this.Width = 4;
 	this.PicWidth = this.PicHeight = 8;
+    this.Xa = 8;
 	this.Ya = 4;
 	this.Dead = false;
 	this.DeadTime = 0;

@@ -63,7 +63,7 @@ Mario.Enemy.prototype.CollideCheck = function() {
                     this.Ya = 0;
                 } else {
                     this.YPicO = 31 - (32 - 8);
-                    this.PicHeight = 8;
+                    this.PicHeight = 0;
                     
                     if (this.SpriteTemplate !== null) {
                         this.SpriteTemplate.IsDead = true;
