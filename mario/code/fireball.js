@@ -21,7 +21,6 @@ Mario.Fireball = function(world, x, y, facing) {
 	this.Height = 8;
 	this.Width = 4;
 	this.PicWidth = this.PicHeight = 8;
-    this.Xa = 8;
 	this.Ya = 4;
 	this.Dead = false;
 	this.DeadTime = 0;
@@ -44,7 +43,9 @@ Mario.Fireball.prototype.Move = function() {
 	
 	if (this.Facing != 0) {
 		this.Anim++;
-	}
+	} else {
+        this.Facing = 1;
+    }
 	
 	if (this.Xa > 2) {
 		this.Facing = 1;
