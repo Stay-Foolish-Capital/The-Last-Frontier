@@ -74,6 +74,7 @@ Mario.LevelState.prototype.Enter = function() {
     this.Sprites.Add(Mario.MarioCharacter);
     this.StartTime = 1;
     this.TimeLeft = 200;
+    this.OneTime = true;
 	
 	this.GotoMapState = false;
 	this.GotoLoseState = false;
@@ -107,8 +108,9 @@ Mario.LevelState.prototype.Update = function(delta) {
     this.Delta = delta;
 	
     this.TimeLeft -= delta;
-    if ((this.TimeLeft | 0) === 0) {
+    if (((this.TimeLeft | 0) <= 0) && this.OneTime) {
         Mario.MarioCharacter.Die();
+        this.OneTime = false;
     }
     
     if (this.StartTime > 0) {
