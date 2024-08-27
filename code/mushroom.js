@@ -1,8 +1,3 @@
-/**
-	Represents a life-giving mushroom.
-	Code by Rob Kleffner, 2011
-*/
-
 Mario.Mushroom = function(world, x, y) {
     this.RunTime = 0;
     this.GroundInertia = 0.89;

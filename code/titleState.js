@@ -1,8 +1,3 @@
-/**
-	Displays the title screen and menu.
-	Code by Rob Kleffner, 2011
-*/
-
 Mario.TitleState = function() {
     this.drawManager = null;
     this.camera = null;

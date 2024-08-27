@@ -1,8 +1,3 @@
-/**
-	Helper to cut up the sprites.
-	Code by Rob Kleffner, 2011
-*/
-
 Mario.SpriteCuts = {
     
     /*********************

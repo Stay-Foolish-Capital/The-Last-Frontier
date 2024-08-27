@@ -1,9 +1,3 @@
-/**
-	Notch made his own sprite class for this game. Rather than hack around my own,
-    I directly ported his to JavaScript and used that where needed.
-	Code by Rob Kleffner, 2011
-*/
-
 Mario.NotchSprite = function(image) {
     this.XOld = 0; this.YOld = 0;
     this.X = 0; this.Y = 0;

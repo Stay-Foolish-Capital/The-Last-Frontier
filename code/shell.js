@@ -1,8 +1,3 @@
-/**
-	Represents a shell that once belonged to a now expired koopa.
-	Code by Rob Kleffner, 2011
-*/
-
 Mario.Shell = function(world, x, y, type) {
 	this.World = world;
 	this.X = x;

@@ -1,8 +1,3 @@
-/**
-	Represents a playable level in the game.
-	Code by Rob Kleffner, 2011
-*/
-
 Mario.Tile = {
     BlockUpper: 1 << 0,
     BlockAll: 1 << 1,

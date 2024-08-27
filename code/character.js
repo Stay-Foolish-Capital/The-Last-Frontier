@@ -1,8 +1,3 @@
-/**
-	Global representation of the mario character.
-	Code by Rob Kleffner, 2011
-*/
-
 Mario.Character = function() {
     //these are static in Notch's code... here it doesn't seem necessary
     this.Large = false;

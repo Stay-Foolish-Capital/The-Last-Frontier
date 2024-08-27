@@ -1,8 +1,3 @@
-/**
-	State shown when the player loses!
-	Code by Rob Kleffner, 2011
-*/
-
 Mario.LoseState = function() {
     this.drawManager = null;
     this.camera = null;

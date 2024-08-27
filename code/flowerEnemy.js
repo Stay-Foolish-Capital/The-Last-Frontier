@@ -1,8 +1,3 @@
-/**
-	Represents a flower enemy.
-	Code by Rob Kleffner, 2011
-*/
-
 Mario.FlowerEnemy = function(world, x, y) {
     this.Image = Enjine.Resources.Images["enemies"];
     this.World = world;

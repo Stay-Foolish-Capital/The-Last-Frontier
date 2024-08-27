@@ -1,8 +1,3 @@
-/**
-	State that's shown when the player wins the game!
-	Code by Rob Kleffner, 2011
-*/
-
 Mario.WinState = function() {
     this.waitTime = 2;
     this.drawManager = null;
