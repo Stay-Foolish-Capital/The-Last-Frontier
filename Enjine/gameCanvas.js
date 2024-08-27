@@ -1,8 +1,3 @@
-/**
-	Base class to represent a double buffered canvas object.
-	Code by Rob Kleffner, 2011
-*/
-
 Enjine.GameCanvas = function() {
 	this.Canvas = null;
 	this.Context2D = null;
